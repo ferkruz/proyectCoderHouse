@@ -6,7 +6,7 @@ export interface Cursos{
   company: string;
 }
 
-export interface AlumnosForm{
+export interface CursoForm{
     id: number;
     name: string;
     email: string;

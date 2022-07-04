@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 
-
+import { ServiceAlumnos } from 'src/app/shared/services/alumnos.service';
 import { AlumnosForm } from '../../../shared/interfaces/alumnos.model'
 
 @Component({
@@ -17,7 +17,7 @@ export class AlumnosFormComponent implements OnInit {
   maxCantChrNombre:number = 15
   maxCantChrMensaje:number = 150
 
-  constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder, private serviceAlumnos: ServiceAlumnos) { 
     this.alumnosForm = fb.group({
       name : ['', Validators.compose([
         Validators.required,
@@ -61,6 +61,8 @@ export class AlumnosFormComponent implements OnInit {
 
   submitForm() {
     console.log(this.alumnosForm.value)
+    this.serviceAlumnos.addAlumno(this.alumnosForm.value)
+
     this.alumnosForm.reset()
   }
 

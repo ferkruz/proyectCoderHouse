@@ -10,7 +10,7 @@
     Responsive side bar
 </mat-toolbar>
   
-  <mat-sidenav-container>
+  <mat-sidenav-container class="bg-default-50 dark:bg-default-800 transition-colors ease-in-out duration-500">
     <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
       <img class="avatar mat-elevation-z8" 
         src="https://mir-s3-cdn-cf.behance.net/user/115/ee7a565151855.57ab7c367a338.png" />
@@ -20,17 +20,17 @@
   
       <mat-divider></mat-divider>
   
-      <button mat-button class="menu-button">
+      <button mat-button class="menu-button" routerLink="/home">
         <mat-icon>home</mat-icon>
         <span>Home</span>
       </button>
-      <button mat-button class="menu-button">
+      <button mat-button class="menu-button" routerLink="/alumnos">
         <mat-icon>person</mat-icon>
-        <span>Profile</span>
+        <span>Alumnos</span>
       </button>
-      <button mat-button class="menu-button">
-        <mat-icon>info</mat-icon>
-        <span>About</span>
+      <button mat-button class="menu-button" routerLink="/cursos">
+        <mat-icon>assignment</mat-icon>
+        <span>Cursos</span>
       </button>
   
       <mat-divider></mat-divider>
