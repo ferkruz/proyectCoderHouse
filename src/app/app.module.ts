@@ -21,6 +21,9 @@ import { AlumnosFormComponent } from './components/alumnos/alumnos-form/alumnos-
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 import { ThemeInitializerProvider } from './theme/theme-initializer.provider';
+import { ModalComponent } from './components/modal/modal.component';
+import { NewsletterComponent } from './components/newsletter/newsletter.component';
+
 
 
 @NgModule({
@@ -32,10 +35,12 @@ import { ThemeInitializerProvider } from './theme/theme-initializer.provider';
     CursosListComponent,
     ClasesListComponent,
     AlumnosFormComponent,
-    RoundBlockDirective,
+    /* RoundBlockDirective,
     ResaltarDirective,
-    NombreCompletoPipe,
-    SidebarComponent
+    NombreCompletoPipe, */
+    SidebarComponent,
+    //ModalComponent,
+    NewsletterComponent
   ],
   imports: [
     BrowserModule,
