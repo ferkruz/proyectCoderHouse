@@ -1,0 +1,45 @@
+<app-modal #modalComponent>
+    <div class="bg-white dark:bg-default-800 transition-colors ease-in-out duration-500 px-2 pt-2 pb-2 sm:p-2 sm:pb-2">
+        <section class="relative block py-24 lg:pt-0 bg-default-50 dark:bg-default-800 transition-colors ease-in-out duration-500">
+ 
+    <div class="text-center p-5 flex-auto justify-center">
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 flex items-center text-red-500 mx-auto" viewBox="0 0 20 20" fill="currentColor">
+<path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+</svg>
+                <h2 class="text-xl font-bold py-4 ">Desea eliminar el Curso {{cursoid}}?</h2>
+                
+    </div>
+    <!--footer-->
+    <div class="p-3  mt-2 text-center space-x-4 md:block">
+        <button class="relative group rounded px-6 h-12 mr-5 bg-blue-800
+                    before:absolute 
+                    before:inset-0 
+                    before:bg-blue-600 
+                    before:scale-x-0 
+                    before:origin-right
+                    before:transition
+                    before:duration-300
+                    hover:before:scale-x-100 
+                    hover:before:origin-left
+                    ">
+                <span class="relative uppercase text-base text-white">Cancelar</span>
+        </button>
+
+        <button class="relative group rounded px-6 h-12 bg-red-800
+                    before:absolute 
+                    before:inset-0 
+                    before:bg-red-600 
+                    before:scale-x-0 
+                    before:origin-right
+                    before:transition
+                    before:duration-300
+                    hover:before:scale-x-100 
+                    hover:before:origin-left
+                    ">
+                    <span class="relative uppercase text-base text-white">Eliminar</span>
+                </button>
+    </div>
+    </section>
+    </div>
+  </app-modal>
