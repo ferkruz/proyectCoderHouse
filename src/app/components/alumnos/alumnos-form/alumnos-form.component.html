@@ -1,0 +1,263 @@
+<section class="relative block py-24 lg:pt-0 bg-default-50 dark:bg-default-800 transition-colors ease-in-out duration-500">
+ 
+    
+    <div class="w-full lg:w-12/12 px-4">
+        <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200">
+        
+            <div class="flex-auto p-5 lg:p-10">
+                <h4 appResaltar appRoundBlock class="font-semibold border-2 p-2 border-red-600">Formulario de contacto Web</h4>
+                <p class="leading-relaxed mt-1 mb-4 text-blueGray-500">
+                Complete este formulario 
+                </p>
+                
+            <form [formGroup]="alumnosForm " (ngSubmit)="submitForm()">
+                <div class="relative w-full mb-3 ">
+                    <div class="-mx-2 md:flex mb-2">
+
+
+                        
+                        <div class="md:w-1/2 px-3 mb-6 md:mb-0">
+                            <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2" htmlFor="full-name">
+                                id
+                            </label>
+                            <input
+                                formControlName="id"
+                                type="text"
+                                class="border-0 px-2 py-2 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring focus: ring-red-300 w-full ease-linear transition-all duration-550"
+                                placeholder="Nombre"
+                            />
+
+                            <!-- mensajes de validación -->
+                            <!-- <div *ngIf="alumnosForm .controls['name'].errors && (alumnosForm .controls['name'].dirty || alumnosForm .controls['name'].touched)">
+                                <p class="text-red-700 font-ligth text-xs" *ngIf="alumnosForm .controls['name'].errors['required']">Campo requerido</p>
+                                
+                                <p class="text-red-700 font-ligth text-xs" *ngIf="alumnosForm .controls['name'].errors['minlength']">
+                                    Este campo debe poseer al menos {{ alumnosForm .controls['name'].errors['minlength'].requiredLength }} caracteres.
+                                    Tipeados {{ alumnosForm .controls['name'].errors['minlength'].actualLength }} caracter(es).
+                                </p>
+                                <p class="text-red-700 font-ligth text-xs" *ngIf="alumnosForm .controls['name'].errors['maxlength']">
+                                    Este campo debe poseer como máximo {{ alumnosForm .controls['name'].errors['maxlength'].requiredLength }} caracteres.
+                                    Tipeados {{ alumnosForm .controls['name'].errors['maxlength'].actualLength }} caracteres.
+                                </p>
+                            </div> -->
+                            </div>    
+
+
+
+
+
+
+
+
+
+                        <div class="md:w-1/2 px-3 mb-6 md:mb-0">
+                            <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2" htmlFor="full-name">
+                                Nombre
+                            </label>
+                            <input
+                                formControlName="name"
+                                type="text"
+                                class="border-0 px-2 py-2 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring focus: ring-red-300 w-full ease-linear transition-all duration-550"
+                                placeholder="Nombre"
+                            />
+
+                            <!-- mensajes de validación -->
+                            <div *ngIf="alumnosForm .controls['name'].errors && (alumnosForm .controls['name'].dirty || alumnosForm .controls['name'].touched)">
+                                <p class="text-red-700 font-ligth text-xs" *ngIf="alumnosForm .controls['name'].errors['required']">Campo requerido</p>
+                                
+                                <p class="text-red-700 font-ligth text-xs" *ngIf="alumnosForm .controls['name'].errors['minlength']">
+                                    Este campo debe poseer al menos {{ alumnosForm .controls['name'].errors['minlength'].requiredLength }} caracteres.
+                                    Tipeados {{ alumnosForm .controls['name'].errors['minlength'].actualLength }} caracter(es).
+                                </p>
+                                <p class="text-red-700 font-ligth text-xs" *ngIf="alumnosForm .controls['name'].errors['maxlength']">
+                                    Este campo debe poseer como máximo {{ alumnosForm .controls['name'].errors['maxlength'].requiredLength }} caracteres.
+                                    Tipeados {{ alumnosForm .controls['name'].errors['maxlength'].actualLength }} caracteres.
+                                </p>
+                            </div>
+                            </div>
+
+                            <div class="relative w-full mb-3">
+                                <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2" htmlFor="full-surname">
+                                    Apellido
+                                </label>
+                                <input
+                                    formControlName="surname"
+                                    type="text"
+                                    class="border-0 px-2 py-2 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring focus: ring-red-300 w-full ease-linear transition-all duration-550"
+                                    placeholder="Apellido"
+                                />
+                
+                                <!-- mensajes de validación -->
+                                <div *ngIf="alumnosForm .controls['surname'].errors && (alumnosForm .controls['surname'].dirty || alumnosForm .controls['surname'].touched)">
+                                    <p class="text-red-700 font-ligth text-xs" *ngIf="alumnosForm .controls['surname'].errors['required']">Campo requerido</p>
+                                    
+                                    <p class="text-red-700 font-ligth text-xs" *ngIf="alumnosForm .controls['surname'].errors['minlength']">
+                                        Este campo debe poseer al menos {{ alumnosForm .controls['surname'].errors['minlength'].requiredLength }} caracteres.
+                                        Tipeados {{ alumnosForm .controls['surname'].errors['minlength'].actualLength }} caracter(es).
+                                    </p>
+                                    <p class="text-red-700 font-ligth text-xs" *ngIf="alumnosForm .controls['surname'].errors['maxlength']">
+                                        Este campo debe poseer como máximo {{ alumnosForm .controls['surname'].errors['maxlength'].requiredLength }} caracteres.
+                                        Tipeados {{ alumnosForm .controls['surname'].errors['maxlength'].actualLength }} caracteres.
+                                    </p>
+                                </div>
+                                </div>
+                    </div>
+                </div>
+                
+
+                <div class="relative w-full mb-3 ">
+                    <div class="-mx-2 md:flex mb-2">
+                        <div class="md:w-1/2 px-3 mb-6 md:mb-0">
+                        <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2" htmlFor="email">
+                            Email
+                        </label>
+                        <input
+                            formControlName="email"
+                            type="email"
+                            class="border-0 px-2 py-2 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring focus: ring-red-300 w-full ease-linear transition-all duration-550"
+                            placeholder="Email"
+                        />
+
+                        <!-- mensajes de validación -->
+                        <div *ngIf="alumnosForm .controls['email'].errors && (alumnosForm .controls['email'].dirty || alumnosForm .controls['email'].touched)">
+                            <p class="text-red-700 font-ligth text-xs" *ngIf="alumnosForm .controls['email'].errors['required']">Campo requerido</p>
+
+                            <p class="text-red-700 font-ligth text-xs" *ngIf="alumnosForm .controls['email'].errors['pattern']">
+                                Ingrese un Email valido
+                            </p>
+                            
+                        </div>
+
+                    </div>
+                    <div class="md:w-1/2 px-3 mb-6 md:mb-0">   
+                        <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2" htmlFor="telefono">
+                            Teléfono
+                        </label>
+                        <input
+                            formControlName="telefono"
+                            type="number"
+                            class="border-0 px-2 py-2 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring focus: ring-red-300 w-full ease-linear transition-all duration-550"
+                            placeholder="Teléfono"
+                        />
+
+                        <!-- mensajes de validación -->
+                        <div *ngIf="alumnosForm .controls['telefono'].errors && (alumnosForm .controls['telefono'].dirty || alumnosForm .controls['telefono'].touched)">
+                        <p class="text-red-700 font-ligth text-xs" *ngIf="alumnosForm .controls['telefono'].errors['required']">Campo requerido</p>
+
+                        <p class="text-red-700 font-ligth text-xs" *ngIf="alumnosForm .controls['telefono'].errors['minlength']">
+                            Este campo debe poseer al menos {{ alumnosForm .controls['telefono'].errors['minlength'].requiredLength }} caracteres.
+                            Tipeados {{ alumnosForm .controls['telefono'].errors['minlength'].actualLength }} caracter(es).
+                        </p>
+                        <p class="text-red-700 font-ligth text-xs" *ngIf="alumnosForm .controls['telefono'].errors['maxlength']">
+                            Este campo debe poseer como máximo {{ alumnosForm .controls['telefono'].errors['maxlength'].requiredLength }} caracteres.
+                            Tipeados {{ alumnosForm .controls['telefono'].errors['maxlength'].actualLength }} caracteres.
+                        </p>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+
+                <div class="relative w-full mb-3 ">
+                    <div class="-mx-2 md:flex mb-2">
+                        <div class="md:w-1/2 px-3 mb-6 md:mb-0">
+                      <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2" for="location">
+                        Cursos
+                      </label>
+                      <div>
+                        <select class="border-0 px-2 py-2 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring focus: ring-red-300 w-full ease-linear transition-all duration-550"
+                            formControlName="curso">
+                          <option>Angular 14</option>
+                          <option>React</option>
+                          <option>NodeJS</option>
+                          <option>Flutter</option>
+                        </select>
+
+                        <!-- mensajes de validación -->
+                        <div *ngIf="alumnosForm .controls['curso'].errors &&  alumnosForm .controls['curso'].touched">
+                            <p class="text-red-700 font-ligth text-xs" *ngIf="alumnosForm .controls['curso'].errors['required']">Campo requerido</p>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="md:w-1/2 px-3 mb-6 md:mb-0">
+                      <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2" for="job-type">
+                        Modalidad
+                      </label>
+                      <div>
+                        <select class="border-0 px-2 py-2 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring focus: ring-red-300 w-full ease-linear transition-all duration-550"
+                            formControlName="modalidad">
+                          <option>Presencial</option>
+                          <option>Online</option>
+                          <option>Mixto</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="md:w-1/2 px-3 mb-6 md:mb-0">
+                      <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2" for="location">
+                        Horarios
+                      </label>
+                      <div>
+                        <select class="border-0 px-2 py-2 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring focus: ring-red-300 w-full ease-linear transition-all duration-550"
+                            formControlName="horario">
+                          <option>Mañana</option>
+                          <option>Tarde</option>
+                          <option>Noche</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="relative w-full px-2">
+                    <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2" htmlFor="mensaje">
+                        Mensaje
+                    </label>
+                    <textarea
+                        formControlName="mensaje"
+                        rows="4"
+                        cols="80"
+                        class="border-0 px-2 py-2 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring focus: ring-red-300 w-full ease-linear transition-all duration-550"
+                        placeholder="Escriba su mensaje..."
+                    ></textarea>
+
+                    <!-- mensajes de validación -->
+                    <div *ngIf="alumnosForm .controls['mensaje'].errors && (alumnosForm .controls['mensaje'].dirty || alumnosForm .controls['mensaje'].touched)">
+                        <p class="text-red-700 font-ligth text-xs" *ngIf="alumnosForm .controls['mensaje'].errors['required']">Campo requerido</p>
+
+                        <p class="text-red-700 font-ligth text-xs" *ngIf="alumnosForm .controls['mensaje'].errors['minlength']">
+                            Este campo debe poseer al menos {{ alumnosForm .controls['mensaje'].errors['minlength'].requiredLength }} caracteres.
+                            Tipeados {{ alumnosForm .controls['mensaje'].errors['minlength'].actualLength }} caracter(es).
+                        </p>
+                        <p class="text-red-700 font-ligth text-xs" *ngIf="alumnosForm .controls['mensaje'].errors['maxlength']">
+                            Este campo debe poseer como máximo {{ alumnosForm .controls['mensaje'].errors['maxlength'].requiredLength }} caracteres.
+                            Tipeados {{ alumnosForm .controls['mensaje'].errors['maxlength'].actualLength }} caracteres.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="text-center mt-6">
+                <button class="bg-blue-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    type="button"
+                    type="submit"
+                    [disabled]="alumnosForm .invalid"
+                >
+                    Enviar mensaje
+                </button>
+                <button class="bg-red-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    type="button"
+                    type="reset"
+                >
+                    Cancelar
+                </button>
+                </div>
+            
+            </form>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+

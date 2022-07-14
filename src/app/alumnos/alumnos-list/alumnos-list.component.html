@@ -1,0 +1,77 @@
+<section class="relative block py-24 lg:pt-0 bg-default-50 dark:bg-default-800 transition-colors ease-in-out duration-500">
+    <div class="w-full lg:w-12/12 px-4">
+        <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200">
+            
+            <div class="flex-auto p-5 lg:p-10">
+            <h4 appResaltar appRoundBlock class="font-semibold border-2 p-2 border-red-600 bg-default-50 dark:bg-default-800 transition-colors ease-in-out duration-500">Listado de Alumnos (MODULO)</h4>
+
+
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="Filtro">
+                Filtro
+                </label>
+                <input (keyup)="applyFilter($event)" 
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="filtro" type="text" placeholder="Filtro">
+            </div>
+
+            <table mat-table [dataSource]="dataSource" class="w-full mat-elevation-z8" matSort>
+            <!-- Id Column -->
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="z-10"> No. </th>
+                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+            
+            <!-- Title Column -->
+            <ng-container matColumnDef="title">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="z-10"> Título </th>
+                <td mat-cell *matCellDef="let element"> {{element.title | slice: 0:30}} </td>
+            </ng-container>
+            
+            <!-- Body Column -->
+            <ng-container matColumnDef="body">
+                <th mat-header-cell *matHeaderCellDef class="z-10"> Descripción </th>
+                <td appResaltar  mat-cell *matCellDef="let element"> {{element.body | slice: 0:50}} </td>
+            </ng-container>
+            
+            <!-- UserId Column -->
+            <ng-container matColumnDef="userId">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="z-10"> Usuario </th>
+                <td mat-cell *matCellDef="let element"> {{element.userId}} </td>
+            </ng-container>
+            <!-- Actions Column -->
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef style="text-align: right;" class="z-10"> Acciones </th>
+                <td mat-cell *matCellDef="let element">
+                <div style="display: flex;align-items: center;justify-content: flex-end;">
+                    <button mat-flat-button color="primary" (click)="selectAlumno(element.id)" style="margin-right: 10px;"><mat-icon>edit</mat-icon></button>
+                    <button mat-flat-button color="warn" (click)="deleteAlumno(element.id)"><mat-icon>delete</mat-icon></button>
+                </div>
+                </td>
+            </ng-container>
+            
+            <tr mat-header-row *matHeaderRowDef="displayedColumns, sticky: true"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+            <mat-paginator class="mat-elevation-z8" [pageSizeOptions]="[10, 25, 50, 100]" showFirstLastButtons></mat-paginator>
+            
+            </div>
+        </div>
+    </div>
+</section>
+
+    <div class='fixed bottom-0 w-full'>
+    <button class='bottom-0 my-8 float-right  text-white text-sm tracking-wide focus:outline-none relative group rounded px-6 h-12 bg-red-600
+            before:absolute 
+            before:inset-0 
+            before:bg-red-800 
+            before:scale-x-0 
+            before:origin-right
+            before:transition
+            before:duration-300
+            hover:before:scale-x-100 
+            hover:before:origin-left'>
+            <span class="relative uppercase text-base text-white">Agregar</span>
+        </button>
+    </div>
+
+    
